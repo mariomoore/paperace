@@ -1,0 +1,6 @@
+[
+  "tests/test_paperace.py::test_get_nearest_point[mousexy0-answerxy0]",
+  "tests/test_paperace.py::test_get_nearest_point[mousexy1-answerxy1]",
+  "tests/test_paperace.py::test_get_nearest_point[mousexy2-answerxy2]",
+  "tests/test_paperace.py::test_get_nearest_point[mousexy3-answerxy3]"
+]
