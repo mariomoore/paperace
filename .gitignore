@@ -11,7 +11,6 @@ __pycache__/*
 .cache/*
 .*.swp
 */.ipynb_checkpoints/*
-.pytest_cache/*
 
 # Project files
 .ropeproject
@@ -32,6 +31,7 @@ htmlcov/*
 .tox
 junit.xml
 coverage.xml
+.pytest_cache/
 
 # Build and docs folder/files
 build/*
