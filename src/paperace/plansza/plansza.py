@@ -28,7 +28,7 @@ pygame.draw.line(img, RED, [400, 20], [400, 160], 3)
 pygame.draw.arc(img, BLACK, [20, 20, 560, 560], pi/2, 3*pi/2, 3)
 pygame.draw.arc(img, BLACK, [WIDTH-20-560, 20, 560, 560], 3*pi/2, pi/2, 3)
 pygame.draw.line(img, BLACK, [300, 20], [WIDTH-20-560/2+10, 20], 3)
-pygame.draw.line(img, BLACK, [300-10, 580], [WIDTH-20-560/2, 580], 3)
+pygame.draw.line(img, BLACK, [300-11, 580], [WIDTH-20-560/2, 580], 3)
 
 # Wewnętrzna banda
 pygame.draw.arc(img, BLACK, [160, 160, 280, 280], pi/2, 3*pi/2, 3)

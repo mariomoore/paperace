@@ -2,5 +2,8 @@
   "tests/test_paperace.py::test_get_nearest_point[mousexy0-answerxy0]",
   "tests/test_paperace.py::test_get_nearest_point[mousexy1-answerxy1]",
   "tests/test_paperace.py::test_get_nearest_point[mousexy2-answerxy2]",
-  "tests/test_paperace.py::test_get_nearest_point[mousexy3-answerxy3]"
+  "tests/test_paperace.py::test_get_nearest_point[mousexy3-answerxy3]",
+  "tests/test_paperace.py::test_check_crossing_lines[begin0-end0-colorscr0-colorbgd0-True]",
+  "tests/test_paperace.py::test_check_crossing_lines[begin1-end1-colorscr1-colorbgd1-False]",
+  "tests/test_paperace.py::test_check_crossing_lines[begin2-end2-colorscr2-colorbgd2-True]"
 ]
