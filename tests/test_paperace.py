@@ -12,7 +12,7 @@ import sys
     ((50, 95), (60, 100)),
 ])
 def test_get_nearest_point(mousexy, answerxy):
-    """Sprawdzenie czy metoda podaje najbliższy punkt (przecięcie kratki) po kliknięciu myszą"""
+    """Sprawdza czy metoda podaje najbliższy punkt (przecięcie kratki) po kliknięciu myszą"""
     point = get_nearest_point(mousexy)
     assert point == answerxy
 
