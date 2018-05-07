@@ -3,7 +3,7 @@ from paperace.const import WIDTH, HEIGHT
 class Car:
     """Obiekt car reprezentujący pojazd gracza.
     Funkcje: get_allowed_positions, move
-    Atrybuty: xpos, ypos, xv, yv"""
+    Atrybuty: xpos, ypos, xv, yv, color"""
     def __init__(self, xpos, ypos, color):
         self.xpos = xpos
         self.ypos = ypos
@@ -12,7 +12,8 @@ class Car:
         self.color = color
 
     def get_allowed_positions(self):
-        """Zwraca listę wszystkich 9-ciu punktów (lub mniej), na jakie może się przesunąć pojazd"""
+        """Zwraca listę wszystkich 9-ciu punktów (lub mniej), na jakie może się
+        przesunąć pojazd"""
         pos = []
         for y in [-20, 0, 20]:
             for x in [-20, 0, 20]:
@@ -23,7 +24,8 @@ class Car:
         return pos
 
     def move(self, destination):
-        """Przesuwa pojazd gracza na zadaną pozycję (destination). Modyfikuje wektor prędkości."""
+        """Przesuwa pojazd gracza na zadaną pozycję (destination). Modyfikuje
+        wektor prędkości."""
         self.xv = destination[0] - self.xpos
         self.yv = destination[1] - self.ypos
         self.xpos = destination[0]

@@ -7,7 +7,8 @@ from paperace.car import Car
 from paperace.const import *
 
 def init_cars_rand(players):
-    """Zwraca listę pojazdów cars, w zależności od liczby graczy (players). Pojazdy ustawia losowo na linii ([400, 40], [400, 140])."""
+    """Zwraca listę pojazdów (cars) w zależności od liczby graczy (players).
+    Pojazdy ustawiane są losowo na linii ([400, 40], [400, 140])."""
     cars = []
     colors = [RED, GREEN, BLUE, YELLOW, CYAN, MAGENTA]
     y_positions = [40, 60, 80, 100, 120, 140]
@@ -20,7 +21,7 @@ def init_cars_rand(players):
     return cars
 
 def get_nearest_point(mousexy):
-    """Zwraca punkt najbliższego przecięcia kratek po kliknięciu myszką.""" 
+    """Zwraca punkt najbliższego przecięcia kratek po kliknięciu myszką."""
     if mousexy[0] % 20 < 10:
         x = int(mousexy[0] / 20.0) * 20
     else:
@@ -32,8 +33,10 @@ def get_nearest_point(mousexy):
     return (x, y)
 
 def check_crossing_lines(first_img, second_img, rectbegin, rectend, first_color, second_color):
-    """Zwraca True jeśli na prostokątnym obszarze rectbegin x rectend na obrazkach first_img i second_img przecinają się linie o kolorach odpowiednio: first_color i second_color."""
-    # Ustawaia prawidłowy prostokąt
+    """Zwraca True jeśli na prostokątnym obszarze (rectbegin) X (rectend) na
+    obrazkach first_img i second_img przecinają się linie o kolorach
+    odpowiednio: first_color i second_color."""
+    # Ustawia prawidłowy prostokąt LG X PD
     xbegin = min(rectbegin[0], rectend[0])
     ybegin = min(rectbegin[1], rectend[1])
     xend = max(rectbegin[0], rectend[0])
@@ -52,7 +55,8 @@ def check_crossing_lines(first_img, second_img, rectbegin, rectend, first_color,
     return False
 
 def get_allowed_car_positions(cars, i):
-    """Zwraca listę punktów, na które może przemieścić się samochód cars[i] oraz usuwa pozycje, na których znajduje się pojazd przeciwnika)."""
+    """Zwraca listę punktów, na które może przemieścić się samochód cars[i]
+    oraz usuwa pozycje, na których znajduje się pojazd przeciwnika)."""
     positions = cars[i].get_allowed_positions()
     for c in cars:
         position_to_remove = ((c.xpos, c.ypos))
