@@ -6,6 +6,7 @@ import random
 from paperace.car import Car
 from paperace.const import *
 
+
 def init_cars_rand(players):
     """Zwraca listę pojazdów (cars) w zależności od liczby graczy (players).
     Pojazdy ustawiane są losowo na linii ([400, 40], [400, 140])."""
@@ -20,6 +21,7 @@ def init_cars_rand(players):
         cars.append(Car(400, y, color))
     return cars
 
+
 def get_nearest_point(mousexy):
     """Zwraca punkt najbliższego przecięcia kratek po kliknięciu myszką."""
     if mousexy[0] % 20 < 10:
@@ -29,8 +31,9 @@ def get_nearest_point(mousexy):
     if mousexy[1] % 20 < 10:
         y = int(mousexy[1] / 20.0) * 20
     else:
-        y = int(math.ceil(mousexy[1] / 20.0)) * 20    
+        y = int(math.ceil(mousexy[1] / 20.0)) * 20
     return (x, y)
+
 
 def check_crossing_lines(first_img, second_img, rectbegin, rectend, first_color, second_color):
     """Zwraca True jeśli na prostokątnym obszarze (rectbegin) X (rectend) na
@@ -54,6 +57,7 @@ def check_crossing_lines(first_img, second_img, rectbegin, rectend, first_color,
                 return True
     return False
 
+
 def get_allowed_car_positions(cars, i):
     """Zwraca listę punktów, na które może przemieścić się samochód cars[i]
     oraz usuwa pozycje, na których znajduje się pojazd przeciwnika)."""
@@ -64,6 +68,7 @@ def get_allowed_car_positions(cars, i):
             positions.remove(position_to_remove)
     return positions
 
+
 def main():
     pygame.init()
     screen = pygame.display.set_mode((WIDTH, HEIGHT))
@@ -72,13 +77,13 @@ def main():
     imgfile = os.path.join(os.path.split(__file__)[0], 'plansza\plansza.png')
     background = pygame.image.load(imgfile).convert()
 
-    cars = init_cars_rand(2) # Lista pojazdów
-    cp = 0 # Aktualny gracz na liście - Current Player
+    cars = init_cars_rand(2)  # Lista pojazdów
+    cp = 0  # Aktualny gracz na liście - Current Player
 
     screen.blit(background, background.get_rect())
     for car in cars:
         pygame.draw.circle(screen, car.color, [car.xpos, car.ypos], 5)
-    pygame.draw.rect(screen, cars[0].color, (0, 0, WIDTH, HEIGHT) , 3)
+    pygame.draw.rect(screen, cars[0].color, (0, 0, WIDTH, HEIGHT), 3)
     pygame.display.flip()
 
     run = True
@@ -103,13 +108,14 @@ def main():
                         print("Koniec gry! Następny ruch poza pole")
                         run = False
                     pygame.draw.circle(screen, cars[cp].color, [cars[cp].xpos, cars[cp].ypos], 5)
-                    
+
                     cp = cp + 1
                     if cp >= len(cars):
                         cp = 0
 
-                    pygame.draw.rect(screen, cars[cp].color, (0, 0, WIDTH, HEIGHT) , 3)
+                    pygame.draw.rect(screen, cars[cp].color, (0, 0, WIDTH, HEIGHT), 3)
         pygame.display.flip()
 
-if __name__ == '__main__' :
+
+if __name__ == '__main__':
     main()

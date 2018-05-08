@@ -1,5 +1,6 @@
 from paperace.const import WIDTH, HEIGHT
 
+
 class Car:
     """Obiekt car reprezentujący pojazd gracza.
     Funkcje: get_allowed_positions, move
