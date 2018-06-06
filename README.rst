@@ -10,7 +10,7 @@ Description
 ===========
 
 This is my first game written in Python. Keep that in mind and be forgiving,
-please ;)
+please ;) All comments in the source code are in Polish - sorry for that!
 
 The goal of the game is to beat one lap on the racetrack by placing dots at
 the intersection of the grids. The player should move clockwise. The first dot
