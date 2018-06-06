@@ -23,7 +23,8 @@ the field by distance [x, y] from the current position OR to one of the 8
 adjacent fields. This simulates the acceleration/deceleration of the vehicle
 and torsion. The player loses when he is out of the track or out of the game
 window.
-.. image:: https://github.com/mariomoore/paperace/blob/master/src/paperace/plansza/plansza.png
+.. class:: no-web
+  .. image:: https://github.com/mariomoore/paperace/blob/master/src/paperace/plansza/plansza.png
 
 Features
 ========
