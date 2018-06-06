@@ -23,17 +23,15 @@ the field by distance [x, y] from the current position OR to one of the 8
 adjacent fields. This simulates the acceleration/deceleration of the vehicle
 and torsion. The player loses when he is out of the track or out of the game
 window.
-
+!(src\paperace\plansza\plansza.png)
 
 Features
 ========
 
 - The game is inteded for 1-6 human players
-- At the beginning of each race the player's position on the red starting line
-is random
+- At the beginning of each race the player's position on the red starting line is random
 - In each race the player's color is random
-- The color of the current player is marked with a border with the same color
-around the racetrack
+- The color of the current player is marked with a border with the same color around the racetrack
 
 
 Note
