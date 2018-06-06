@@ -90,18 +90,15 @@ def race_loop(human_players):
                     cars[cp].move(nearestpoint)
                     pygame.draw.line(screen, cars[cp].color, [xoldpos, yoldpos], [cars[cp].xpos, cars[cp].ypos], 2)
                     if check_crossing_lines(background, screen, (cars[cp].xpos, cars[cp].ypos), (xoldpos, yoldpos), BLACK, cars[cp].color):
-                        #print("Koniec gry! Kraksa")
                         pygame.draw.circle(screen, cars[cp].color, [cars[cp].xpos, cars[cp].ypos], 5)
                         del cars[cp]
                         cp -= 1
                         if len(cars) == 0:
                             return "Crash"
                     if check_crossing_lines(background, screen, (cars[cp].xpos, cars[cp].ypos), (xoldpos, yoldpos), RED, cars[cp].color) and xoldpos != 400:
-                        #print("Koniec gry! ZWYCIĘSTWO!")
                         pygame.draw.circle(screen, cars[cp].color, [cars[cp].xpos, cars[cp].ypos], 5)
                         return "Winning"
                     if len(cars[cp].get_allowed_positions()) == 0:
-                        #print("Koniec gry! Następny ruch poza pole")
                         pygame.draw.circle(screen, cars[cp].color, [cars[cp].xpos, cars[cp].ypos], 5)
                         del cars[cp]
                         cp -= 1
@@ -223,7 +220,7 @@ def check_crossing_lines(first_img, second_img, rectbegin, rectend, first_color,
 if __name__ == '__main__':
     pygame.init()
     screen = pygame.display.set_mode((WIDTH, HEIGHT))
-    pygame.display.set_caption("paperace - my first python game")
+    pygame.display.set_caption("PapeRace")
 
     imgfile = os.path.join(os.path.split(__file__)[0], 'plansza\plansza.png')
     background = pygame.image.load(imgfile).convert()
